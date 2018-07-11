@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A simple server that returns funny random pick-up lines",
   "main": "index.js",
-  "repository": "?.git",
+  "repository": "https://github.com/codeshifu/pickup-lines",
   "author": "Olushi Luqman O. <olushilukmon03@gmail.com>",
   "license": "MIT",
   "scripts": {
