@@ -1,6 +1,17 @@
 {
+  "name": "pick-up-lines",
+  "version": "1.0.0",
+  "description": "A simple server that returns funny random pick-up lines",
+  "main": "index.js",
+  "repository": "?.git",
+  "author": "Olushi Luqman O. <olushilukmon03@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "lowdb": "^1.0.0",
     "shortid": "^2.2.11"
