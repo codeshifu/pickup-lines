@@ -14,7 +14,7 @@ exports.randomLine = (req, res) => {
         lines = data[keys[randomKeyIndex]],
         randomLine = lines[roll(lines)];
 
-      res.json({ body: randomLine });
+      res.json({ data: randomLine });
     })
     .catch(err => res.status(200).send(err.message));
 };
@@ -24,6 +24,6 @@ exports.lines = (req, res) => {
     .then(
       db => (db.has(pickupLines).value() ? db.get(pickupLines).value() : {})
     )
-    .then(lines => res.send(lines))
+    .then(lines => res.status(200).send({ data: lines }))
     .catch(err => res.status(200).send(err.message));
 };
