@@ -1,8 +1,11 @@
-const express = require('express'),
-  bodyParser = require('body-parser'),
-  cors = require('cors'),
-  router = require('./src/router'),
-  PORT = process.env.PORT || 8888;
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const pingmydyno = require('pingmydyno');
+
+const router = require('./src/router');
+
+const PORT = process.env.PORT || 8888;
 
 const app = express();
 
@@ -21,6 +24,8 @@ app.get('/', (req, res) => {
 const server = app.listen(PORT, () => {
   const host = server.address().address;
   const port = server.address().port;
-
+  
   console.log(`Server listening on http://${host}:${port}`);
+  
+  pingmydyno('https://pickup-lines.herokuapp.com/api');
 });
