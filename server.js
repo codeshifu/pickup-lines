@@ -27,5 +27,5 @@ const server = app.listen(PORT, () => {
   
   console.log(`Server listening on http://${host}:${port}`);
   
-  pingmydyno('https://pickup-lines.herokuapp.com/api');
+  // pingmydyno('https://pickup-lines.herokuapp.com/api');
 });
